@@ -9,10 +9,15 @@ const p2 = {
   button: document.getElementById("p2-btn")
 }
 
+// increases the player's score by 1, and then checks if the player has won the game
 function updateScore(player, opponent) {
+  // adds 1 to player's score
   player.score.innerHTML = parseInt(player.score.innerHTML) + 1;
+  // checks if player has reached the target score AND beaten their 
+  // opponent by 2 or more points
   if (parseInt(player.score.innerHTML) >= parseInt(goalSelect.value)
     && ((parseInt(player.score.innerHTML) - parseInt(opponent.score.innerHTML)) >= 2)) {
+    // game won animations
     player.score.style.color = "#38ae38";
     opponent.score.style.color = "#cf2b2b";
     player.button.disabled = true;
@@ -28,6 +33,7 @@ p2.button.addEventListener("click", () => {
   updateScore(p2, p1);
 })
 
+// resets the scoreboard to 0 - 0 and resets to initial color scheme
 function resetGame() {
   for (let p of [p1, p2]) {
     p.score.style.color = "#2c2e40";
