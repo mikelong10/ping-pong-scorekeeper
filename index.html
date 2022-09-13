@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Ping Pong</title>
+</head>
+
+<body>
+  <main>
+    <img src="pingpong.jpg" alt="ping-pong-paddles" id="display">
+    <h1>Ping Pong Score Keeper</h1>
+    <section id="scoreboard">
+      <div class="score">
+        <p id="p1-score" class="digit">0</p>
+        <p id="divider">to</p>
+        <p id="p2-score" class="digit">0</p>
+      </div>
+      <p id="desc">Use the buttons below to keep score</p>
+      <div class="goal">
+        <p>Playing to:</p>
+        <select name="goal" id="goal-select">
+          <option value="5">5</option>
+          <option value="7">7</option>
+          <option value="11" selected>11</option>
+          <option value="15">15</option>
+          <option value="21">21</option>
+          <option value="25">25</option>
+        </select>
+      </div>
+    </section>
+    <section class="buttons">
+      <button id="p1-btn">+1 Player One</button>
+      <button id="reset-btn">Reset</button>
+      <button id="p2-btn">+1 Player Two</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
